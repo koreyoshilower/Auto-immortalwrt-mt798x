@@ -31,7 +31,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: config/a10.config
   DIY_P1_SH: script/diy-part1.sh
-  #DIY_P2_SH: script/diy-part7.sh
+  DIY_P2_SH: script/diy-part7.sh
   SSH_ACTIONS: false
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
