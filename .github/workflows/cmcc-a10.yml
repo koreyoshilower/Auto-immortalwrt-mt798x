@@ -173,7 +173,7 @@ jobs:
       uses: actions/upload-artifact@main
       if: env.UPLOAD_FIRMWARE == 'true' && steps.organize.outputs.status == 'success' && !cancelled()
       with:
-        name: 360t7-immortalwrt-mt798x固件
+        name: cmcc-a10-immortalwrt-mt798x固件
         path: ${{ env.FIRMWARE }}
 
     - name: 生成release标签
@@ -181,9 +181,9 @@ jobs:
       if: env.UPLOAD_RELEASE == 'true' && steps.compile.outputs.status == 'success' && !cancelled()
       run: |
         echo -e "✅ immortalwrt-mt798x 源码版本，256M运存建议时常重启一次，不然容易出现爆运存导致卡网" >> release.txt
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-360t7">> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-cmcc-a10">> $GITHUB_OUTPUT
         touch release.txt
-        echo "360t7" >> release.txt
+        echo "cmcc-a10" >> release.txt
         echo "📥 固件下载" >> release.txt
         echo "status=success" >>$GITHUB_OUTPUT
 
